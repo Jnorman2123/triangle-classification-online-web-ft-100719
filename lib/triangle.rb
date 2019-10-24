@@ -15,5 +15,6 @@ class Triangle
       @type == "isosceles"
     elsif @a == @b && @a == @c
       @type == "equilateral"
+    end
   end
 end
