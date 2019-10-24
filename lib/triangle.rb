@@ -13,9 +13,9 @@ class Triangle
       @type
     elsif (@a == @b && @a != @c) || (@a == @c && @a != @b) ||(@b == @c && @b != @a)
       @type == "isosceles"
-      @type 
+      @type
     elsif @a == @b && @a == @c
-      @type == "equilateral" 
+      @type == "equilateral"
       @type
     end
   end
