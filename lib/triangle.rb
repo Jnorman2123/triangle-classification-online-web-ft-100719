@@ -8,7 +8,7 @@ class Triangle
   end
 
   def kind
-    if @a_length != @b_length && @a_length != @c_length && @b_length != @c_length 
-      
+    if @a_length != @b_length && @a_length != @c_length && @b_length != @c_length
+
   end
 end
