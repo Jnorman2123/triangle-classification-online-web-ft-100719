@@ -12,5 +12,6 @@ class Triangle
     if @a_length != @b_length && @a_length != @c_length && @b_length != @c_length
       type = "scalene"
       type
+    elsif (@a_length == @b_length && @a_length != @c_length) || (@a_length == @c_length && @a_length != @b_length)
   end
 end
