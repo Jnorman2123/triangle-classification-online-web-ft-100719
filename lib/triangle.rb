@@ -1,17 +1,17 @@
 class Triangle
   # write code here
-  attr_accessor :a_length, :b_length, :c_length
-  def initialize(a_length, b_length, c_length)
-    @a_length = a_length
-    @b_length = b_length
-    @c_length = c_length
+  attr_accessor :a, :b, :c
+  def initialize(a, b, c)
+    @a = a
+    @b = b
+    @c = c
   end
 
   def kind
     type
-    if @a_length != @b_length && @a_length != @c_length && @b_length != @c_length
+    if @a != @b && @a != @c && @b != @c
       type = "scalene"
       type
-    elsif (@a_length == @b_length && @a_length != @c_length) || (@a_length == @c_length && @a_length != @b_length)
+    elsif (@a == @b && @a != @c) || (@a == @c && @a != @b)
   end
 end
