@@ -10,6 +10,7 @@ class Triangle
   def kind
     type
     if @a_length != @b_length && @a_length != @c_length && @b_length != @c_length
-      type = "scal"
+      type = "scalene"
+      type
   end
 end
