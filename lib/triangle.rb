@@ -9,21 +9,21 @@ class Triangle
 
   def kind
     @type
-    if @a != @b && @a != @c && @b != @c
-      @type = :scalene
-      @type
-    elsif (@a == @b && @a != @c) || (@a == @c && @a != @b) ||(@b == @c && @b != @a)
-      @type = :isosceles
-      @type
-    elsif @a == @b && @a == @c && @a != 0
-      @type = :equilateral
-      @type
-    elsif @a == 0 || @b == 0 || @c == 0
+    if @a == 0 || @b == 0 || @c == 0
       begin
         raise TriangleError
       rescue TriangleError => error
         puts error.message
       end
+    elsif (@a == @b && @a != @c) || (@a == @c && @a != @b) ||(@b == @c && @b != @a)
+      @type = :isosceles
+      @type
+    elsif @a == @b && @a == @c
+      @type = :equilateral
+      @type
+    elsif @a != @b && @a != @c && @b != @c
+      @type = :scalene
+      @type
     end
   end
 
