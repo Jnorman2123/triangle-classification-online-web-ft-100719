@@ -18,6 +18,10 @@ class Triangle
     elsif @a == @b && @a == @c
       @type = :equilateral
       @type
+    elsif @a == 0 || @b == 0 || @c == 0 
+      class TriangleError < StandardError 
+
+      end  
     end
   end
 end
