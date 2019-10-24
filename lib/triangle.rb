@@ -1,6 +1,6 @@
 class Triangle
   # write code here
-  attr_accessor :a, :b, :c
+  attr_accessor :a, :b, :c, :type
   def initialize(a, b, c)
     @a = a
     @b = b
@@ -8,16 +8,16 @@ class Triangle
   end
 
   def kind
-    type
+    @type
     if @a != @b && @a != @c && @b != @c
-      type = "scalene"
-      type
+      @type = :scalene
+      @type
     elsif (@a == @b && @a != @c) || (@a == @c && @a != @b) ||(@b == @c && @b != @a)
-      type == "isosceles"
-      type
+      @type == :isosceles
+      @type
     elsif @a == @b && @a == @c
-      type == "equilateral"
-      type
+      @type == :equilateral
+      @type
     end
   end
 end
