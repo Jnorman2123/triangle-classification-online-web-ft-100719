@@ -19,9 +19,15 @@ class Triangle
       @type = :equilateral
       @type
     elsif @a == 0 || @b == 0 || @c == 0
-      class TriangleError < StandardError
-
-      end
+      begin 
+        raise TriangleError 
+      rescue TriangleError => error 
+        error 
+      end 
     end
+  end
+
+  class TriangleError < StandardError
+
   end
 end
